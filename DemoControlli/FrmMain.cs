@@ -66,5 +66,32 @@ namespace DemoControlli
             // il ciclo precedente può essere sostituito dalla seguente istruzione:
             // lbxFrazioni.Items.AddRange(listeFrazioni[cmbPaeseResidenza.SelectedIndex].ToArray());
         }
+
+        private void btnCreaPulsanti_Click(object sender, EventArgs e)
+        {
+            // Creare una serie di "nudNPulsanti" pulsanti  quadrati, di colori diversi (casuali) in modo tale da riempire al massimo il FlowLayoutPanel flpPulsanti
+
+            // numero di pulsanti indicato dall'utente
+            int n = Convert.ToInt32(nudNPulsanti.Value);
+
+            pgbAvanzamento.Value = 0;
+            pgbAvanzamento.Minimum = 0;                 
+            pgbAvanzamento.Maximum = n - 1;
+            pgbAvanzamento.Step = 1;
+
+            flpPulsanti.Controls.Clear();
+
+            for (int i = 0; i < n; i++)
+            {
+                Button btn = new Button();
+                
+                // impostare btn in modo tale che sia quadrato, di colore casuale, con testo l'indice del ciclo +1; le dimenzioni del singolo pulsante devono essere tali che il numero totale di pulsanti riempia al massimo il flp
+
+                // inserisce il pulsante nel FlowLayoutPanel
+                flpPulsanti.Controls.Add(btn);
+
+                pgbAvanzamento.PerformStep(); // avanza la progress bar di uno step
+            }
+        }
     }
 }

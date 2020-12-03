@@ -51,12 +51,18 @@
             this.rdbAltro = new System.Windows.Forms.RadioButton();
             this.cbxAccetta = new System.Windows.Forms.CheckBox();
             this.pnlPulsanti = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudNPulsanti = new System.Windows.Forms.NumericUpDown();
+            this.lblNPulsanti = new System.Windows.Forms.Label();
+            this.btnCreaPulsanti = new System.Windows.Forms.Button();
+            this.pgbAvanzamento = new System.Windows.Forms.ProgressBar();
+            this.flpPulsanti = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlStatusBar.SuspendLayout();
             this.gbxControlliComuni.SuspendLayout();
             this.gbxStatoCivile.SuspendLayout();
             this.gbxSesso.SuspendLayout();
             this.pnlPulsanti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNPulsanti)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlStatusBar
@@ -295,20 +301,79 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPulsanti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlPulsanti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPulsanti.Controls.Add(this.flowLayoutPanel1);
+            this.pnlPulsanti.Controls.Add(this.label2);
+            this.pnlPulsanti.Controls.Add(this.nudNPulsanti);
+            this.pnlPulsanti.Controls.Add(this.lblNPulsanti);
+            this.pnlPulsanti.Controls.Add(this.btnCreaPulsanti);
+            this.pnlPulsanti.Controls.Add(this.pgbAvanzamento);
+            this.pnlPulsanti.Controls.Add(this.flpPulsanti);
             this.pnlPulsanti.Location = new System.Drawing.Point(398, 12);
             this.pnlPulsanti.Name = "pnlPulsanti";
             this.pnlPulsanti.Size = new System.Drawing.Size(412, 571);
             this.pnlPulsanti.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // label2
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 162);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(400, 400);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label2.Location = new System.Drawing.Point(6, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(399, 51);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Creare una serie di \"nudNPulsanti\" pulsanti  quadrati, di colori diversi (casuali" +
+    ") in modo tale da riempire al massimo il FlowLayoutPanel flpPulsanti\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // nudNPulsanti
+            // 
+            this.nudNPulsanti.Location = new System.Drawing.Point(6, 97);
+            this.nudNPulsanti.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudNPulsanti.Name = "nudNPulsanti";
+            this.nudNPulsanti.Size = new System.Drawing.Size(120, 22);
+            this.nudNPulsanti.TabIndex = 4;
+            this.nudNPulsanti.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // lblNPulsanti
+            // 
+            this.lblNPulsanti.AutoSize = true;
+            this.lblNPulsanti.Location = new System.Drawing.Point(3, 69);
+            this.lblNPulsanti.Name = "lblNPulsanti";
+            this.lblNPulsanti.Size = new System.Drawing.Size(166, 16);
+            this.lblNPulsanti.TabIndex = 3;
+            this.lblNPulsanti.Text = "Numero pulsanti da creare";
+            // 
+            // btnCreaPulsanti
+            // 
+            this.btnCreaPulsanti.Location = new System.Drawing.Point(239, 72);
+            this.btnCreaPulsanti.Name = "btnCreaPulsanti";
+            this.btnCreaPulsanti.Size = new System.Drawing.Size(166, 52);
+            this.btnCreaPulsanti.TabIndex = 2;
+            this.btnCreaPulsanti.Text = "Crea pulsanti";
+            this.btnCreaPulsanti.UseVisualStyleBackColor = true;
+            this.btnCreaPulsanti.Click += new System.EventHandler(this.btnCreaPulsanti_Click);
+            // 
+            // pgbAvanzamento
+            // 
+            this.pgbAvanzamento.Location = new System.Drawing.Point(5, 536);
+            this.pgbAvanzamento.Name = "pgbAvanzamento";
+            this.pgbAvanzamento.Size = new System.Drawing.Size(400, 23);
+            this.pgbAvanzamento.TabIndex = 1;
+            // 
+            // flpPulsanti
+            // 
+            this.flpPulsanti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.flpPulsanti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.flpPulsanti.Location = new System.Drawing.Point(5, 130);
+            this.flpPulsanti.Name = "flpPulsanti";
+            this.flpPulsanti.Size = new System.Drawing.Size(400, 400);
+            this.flpPulsanti.TabIndex = 0;
             // 
             // FrmMain
             // 
@@ -333,6 +398,8 @@
             this.gbxSesso.ResumeLayout(false);
             this.gbxSesso.PerformLayout();
             this.pnlPulsanti.ResumeLayout(false);
+            this.pnlPulsanti.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNPulsanti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,7 +428,12 @@
         private System.Windows.Forms.ComboBox cmbPaeseResidenza;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbxFrazioni;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpPulsanti;
+        private System.Windows.Forms.NumericUpDown nudNPulsanti;
+        private System.Windows.Forms.Label lblNPulsanti;
+        private System.Windows.Forms.Button btnCreaPulsanti;
+        private System.Windows.Forms.ProgressBar pgbAvanzamento;
+        private System.Windows.Forms.Label label2;
     }
 }
 
