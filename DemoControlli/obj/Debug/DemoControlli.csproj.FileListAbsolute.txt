@@ -1,0 +1,9 @@
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\bin\Debug\DemoControlli.exe
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\bin\Debug\DemoControlli.exe.config
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.FrmMain.resources
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.Properties.Resources.resources
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.csproj.GenerateResource.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.csproj.CoreCompileInputs.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.exe
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.pdb
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoControlli\obj\Debug\DemoControlli.csprojAssemblyReference.cache
