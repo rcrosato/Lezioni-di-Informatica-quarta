@@ -106,7 +106,26 @@ namespace LezioniOOP
         public string Informazioni() => $"Sono un auto {this.marca} {this.modello}";        
 
         public void Elabora() => this.potenza = (int)(this.potenza * 1.1);
-        
 
+
+
+        // manteniamo al massimo gli ultimi cinque proprietari dell'auto
+        private const int MAX_PROPRIETARI = 5;
+        private string[] proprietari = new string[MAX_PROPRIETARI];
+
+        private int numeroPropietari = 0;
+
+
+        // l'indicizzatore seguente restituisce il 1^, 2^, ... proprietario dell'auto, quindi i può valere 1, 2, ..., numeroProprietari
+        public string this[int i]
+        {
+            get
+            {
+                if (i >= 1 && i <= numeroPropietari)
+                    return proprietari[i - 1];
+                else
+                    throw new ArgumentException("i", "Argomento fuori dai limiti");
+            }
+        }
     }
 }
