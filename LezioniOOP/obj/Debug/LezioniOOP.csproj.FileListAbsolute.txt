@@ -1,9 +1,0 @@
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\bin\Debug\LezioniOOP.exe.config
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\bin\Debug\LezioniOOP.exe
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\bin\Debug\LezioniOOP.pdb
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.FrmMain.resources
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.Properties.Resources.resources
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.csproj.GenerateResource.cache
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.csproj.CoreCompileInputs.cache
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.exe
-C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\LezioniOOP\obj\Debug\LezioniOOP.pdb
