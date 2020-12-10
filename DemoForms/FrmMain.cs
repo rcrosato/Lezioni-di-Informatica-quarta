@@ -14,9 +14,14 @@ namespace DemoForms
             InitializeComponent();
 
             splash = new FrmSplash();
-            splash.Show();
-            Application.DoEvents();
-            Thread.Sleep(2000);
+            splash.Show();            
+            
+            for(int i = splash.pgbCaricamento.Minimum; i <= splash.pgbCaricamento.Maximum; i++)
+            {
+                splash.pgbCaricamento.PerformStep();
+                Thread.Sleep(500);
+                Application.DoEvents();
+            }            
         }
 
         private void FrmMain_Shown(object sender, EventArgs e)

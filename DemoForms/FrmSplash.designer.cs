@@ -119,7 +119,6 @@ namespace DemoForms
             this.pgbCaricamento.Name = "pgbCaricamento";
             this.pgbCaricamento.Size = new System.Drawing.Size(403, 23);
             this.pgbCaricamento.Step = 1;
-            this.pgbCaricamento.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbCaricamento.TabIndex = 6;
             this.pgbCaricamento.UseWaitCursor = true;
             // 
