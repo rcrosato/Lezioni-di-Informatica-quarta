@@ -46,7 +46,21 @@ namespace LezioniOOP
             string s = a.Marca;
             
             a.Potenza = 120;
-            a.Potenza = 200;
+            
+        }
+
+        private void btnAggiungi_Click(object sender, EventArgs e)
+        {
+            if (a != null)
+                a.AggiungiProprietario(txtProprietario.Text);
+        }
+
+        private void btnMostra_Click(object sender, EventArgs e)
+        {
+            if (a != null)
+            {
+                MessageBox.Show(a[1] + " è il primo proprietario dell'auto");
+            }
         }
     }
 }

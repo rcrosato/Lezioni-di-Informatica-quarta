@@ -39,6 +39,10 @@ namespace LezioniOOP
             this.lblAutoCreate = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnInfo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtProprietario = new System.Windows.Forms.TextBox();
+            this.btnAggiungi = new System.Windows.Forms.Button();
+            this.btnMostra = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,11 +120,51 @@ namespace LezioniOOP
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nome proprietario";
+            // 
+            // txtProprietario
+            // 
+            this.txtProprietario.Location = new System.Drawing.Point(184, 136);
+            this.txtProprietario.Name = "txtProprietario";
+            this.txtProprietario.Size = new System.Drawing.Size(164, 24);
+            this.txtProprietario.TabIndex = 8;
+            // 
+            // btnAggiungi
+            // 
+            this.btnAggiungi.Location = new System.Drawing.Point(354, 137);
+            this.btnAggiungi.Name = "btnAggiungi";
+            this.btnAggiungi.Size = new System.Drawing.Size(106, 33);
+            this.btnAggiungi.TabIndex = 9;
+            this.btnAggiungi.Text = "Aggiungi";
+            this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
+            // 
+            // btnMostra
+            // 
+            this.btnMostra.Location = new System.Drawing.Point(466, 136);
+            this.btnMostra.Name = "btnMostra";
+            this.btnMostra.Size = new System.Drawing.Size(106, 34);
+            this.btnMostra.TabIndex = 10;
+            this.btnMostra.Text = "Mostra";
+            this.btnMostra.UseVisualStyleBackColor = true;
+            this.btnMostra.Click += new System.EventHandler(this.btnMostra_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 467);
+            this.Controls.Add(this.btnMostra);
+            this.Controls.Add(this.btnAggiungi);
+            this.Controls.Add(this.txtProprietario);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnCrea);
@@ -151,6 +195,10 @@ namespace LezioniOOP
         private System.Windows.Forms.ToolStripStatusLabel lblAutoCreate;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtProprietario;
+        private System.Windows.Forms.Button btnAggiungi;
+        private System.Windows.Forms.Button btnMostra;
     }
 }
 

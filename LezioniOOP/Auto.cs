@@ -76,6 +76,15 @@ namespace LezioniOOP
         }
 
 
+        public string Colore
+        {
+            get
+            {
+                return "non precisato";
+            }
+        }
+
+
         public static string AutoCreate()
         {
             string s = $"Ci sono {autoCreate} automobili in memoria";
@@ -126,6 +135,38 @@ namespace LezioniOOP
                 else
                     throw new ArgumentException("i", "Argomento fuori dai limiti");
             }
+        }
+
+        private static string[] ordinali = { "primo", "secondo", "terzo", "quarto", "quinto" };
+
+        // questo secondo indicizzatore restituisce il proprietario in base alla stringa passata dall'utente che può valere "primo", "secondo", ...
+        public string this[string ordinale]
+        {
+            get
+            {
+                ordinale = ordinale.ToLower().Trim();
+                int i = -1;
+                for (int j = 0; i == -1 && j < ordinali.Length; i++)
+                    if (ordinali[j] == ordinale)
+                        i = j;
+                return this[i + 1];
+            }
+        }
+
+
+        /// <summary>
+        /// Aggiunge un proprietario all'auto fino ad un massimo di MAX_PROPRIETARI 
+        /// </summary>
+        /// <param name="nome">nome del proprietario</param>
+        public void AggiungiProprietario(string nome)
+        {
+            if (nome != "" && numeroPropietari < MAX_PROPRIETARI)
+            {
+                proprietari[numeroPropietari] = nome;
+                numeroPropietari++;
+            }
+            else
+                throw new ArgumentOutOfRangeException($"Un'auto può avere al massimo {MAX_PROPRIETARI} proprietari");
         }
     }
 }
