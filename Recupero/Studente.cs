@@ -21,5 +21,93 @@ namespace Recupero
 {
     class Studente
     {
+        string nome;
+        List<Valutazione> valutazioni;  // elenco delle valutazioni delle singole materie
+
+
+        public Studente(string nome)
+        {
+            nome = nome.Trim().ToUpper();
+            if (nome != "")
+                this.nome = nome;
+            else
+                throw new Exception("Uno studente deve avere un nome");
+
+            valutazioni = new List<Valutazione>();
+        }
+
+
+        public Studente(string nomeS, List<Valutazione> voti): this(nomeS)
+        {
+            AggiornaVoti(voti);
+        }
+
+        public void AggiornaVoti(List<Valutazione> voti)
+        {
+            List<Valutazione> cloneVoti = new List<Valutazione>(voti);
+
+            // toglie i duplicati dalla lista di origine e li sostituisce con la media
+            for (int i = 0; i < cloneVoti.Count; i++)
+            {
+                double sommaVoti = cloneVoti[i].Voto;
+                int contaVoti = 1;
+                int j = i + 1;
+                while (j < cloneVoti.Count)
+                {
+                    if (cloneVoti[j].Materia == cloneVoti[i].Materia)
+                    {
+                        sommaVoti += cloneVoti[j].Voto;
+                        contaVoti++;
+                        cloneVoti.RemoveAt(j);
+                    }
+                    else
+                        j++;
+                }
+                cloneVoti[i].Voto = (int)Math.Round(sommaVoti / contaVoti);
+            }
+
+
+            // aggiorna la lista valutazioni dello studente (Nota: visto che può essere aggiornata solo con il metodo AggiornaVoti, non potranno esserci materie duplicate)
+            foreach(Valutazione v in cloneVoti)
+            {
+                Valutazione vs = this[v.Materia];
+                if (vs == null)
+                    valutazioni.Add(new Valutazione(v.Materia, v.Voto));
+                else
+                    vs.Voto = v.Voto;
+            }                
+        }
+
+        /// <summary>
+        /// Ritorna la valutazione in una determinata materia e null se la materia non esite
+        /// </summary>
+        /// <param name="materia">materia da esaminare</param>
+        /// <returns>valutazione nella materia (null se non esiste)</returns>
+        private Valutazione this[string materia]
+        {
+            get
+            {
+                Valutazione val = null;
+                for (int i = 0; val == null && i < valutazioni.Count; i++)
+                    if (valutazioni[i].Materia == materia)
+                        val = valutazioni[i];               
+                return val;
+            }
+        }
+
+
+        public string Nome
+        {
+            get => nome;
+        }
+
+
+        public override string ToString()
+        {
+            string s = $"{Nome} - ";
+            foreach (Valutazione v in valutazioni)
+                s += $"{v.ToString()}; ";
+            return s;
+        }
     }
 }
