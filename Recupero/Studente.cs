@@ -10,7 +10,7 @@ using System.Collections.Generic;
   - un metodo che accetti come argomento una lista di valutazioni (vedi esempio costruttore);
   - una proprietà che restituisca il nome dello studente
   - un indicizzatore che restituisca il voto dello studente nella materia il cui indice numerico è passato come parametro
-  - un indicizzatore che restituisca il voto dello studente nella materia il cui nome è passato come parametro
+  - un indicizzatore che restituisca la valutazione dello studente nella materia il cui nome è passato come parametro
   - un metodo che calcoli la media dei voti
   - un metodo che ritorni il numero di insufficienze
   - un metodo che ritorni il numero di insufficienze gravi (voto <= 4);
@@ -22,7 +22,7 @@ namespace Recupero
     class Studente
     {
         string nome;
-        List<Valutazione> valutazioni;  // elenco delle valutazioni delle singole materie
+        List<Valutazione> valutazioni;
 
 
         public Studente(string nome)
@@ -32,15 +32,10 @@ namespace Recupero
                 this.nome = nome;
             else
                 throw new Exception("Uno studente deve avere un nome");
-
             valutazioni = new List<Valutazione>();
         }
 
-
-        public Studente(string nomeS, List<Valutazione> voti): this(nomeS)
-        {
-            AggiornaVoti(voti);
-        }
+        public Studente(string nomeS, List<Valutazione> voti) : this(nomeS) => AggiornaVoti(voti);
 
         public void AggiornaVoti(List<Valutazione> voti)
         {
@@ -66,41 +61,62 @@ namespace Recupero
                 cloneVoti[i].Voto = (int)Math.Round(sommaVoti / contaVoti);
             }
 
-
             // aggiorna la lista valutazioni dello studente (Nota: visto che può essere aggiornata solo con il metodo AggiornaVoti, non potranno esserci materie duplicate)
-            foreach(Valutazione v in cloneVoti)
+            foreach (Valutazione v in cloneVoti)
             {
                 Valutazione vs = this[v.Materia];
                 if (vs == null)
                     valutazioni.Add(new Valutazione(v.Materia, v.Voto));
                 else
                     vs.Voto = v.Voto;
-            }                
+            }
         }
-
-        /// <summary>
-        /// Ritorna la valutazione in una determinata materia e null se la materia non esite
-        /// </summary>
-        /// <param name="materia">materia da esaminare</param>
-        /// <returns>valutazione nella materia (null se non esiste)</returns>
-        private Valutazione this[string materia]
+        
+        // Ritorna la valutazione in una determinata materia e null se la materia non esite
+        public Valutazione this[string materia]
         {
             get
             {
                 Valutazione val = null;
                 for (int i = 0; val == null && i < valutazioni.Count; i++)
                     if (valutazioni[i].Materia == materia)
-                        val = valutazioni[i];               
+                        val = valutazioni[i];
                 return val;
             }
         }
 
 
-        public string Nome
+        // Ricorda: per le proprietà in sola lettura (cioè con il solo ramo get) posso usare la forma compatta come di seguito
+        public string Nome => nome;
+
+        public int this[int indice] => valutazioni[indice].Voto;
+
+        public double MediaVoti()
         {
-            get => nome;
+            // calcolare la media delle valutazioni che sono già associate allo studente
+            double somma = 0;
+            foreach (Valutazione v in valutazioni)
+                somma += v.Voto;
+            return somma / valutazioni.Count;
         }
 
+        public int Insufficienze()
+        {
+            int conta = 0;
+            foreach (Valutazione v in valutazioni)
+                if (v.Voto < 6)
+                    conta++;
+            return conta;
+        }
+
+        public int InsufficienzeGravi()
+        {
+            int conta = 0;
+            foreach (Valutazione v in valutazioni)
+                if (v.Voto <= 4)
+                    conta++;
+            return conta;
+        }
 
         public override string ToString()
         {

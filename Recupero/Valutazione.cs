@@ -13,10 +13,7 @@ namespace Recupero
 
         public string Materia
         {
-            get
-            {
-                return materia;
-            }
+            get => materia;
 
             private set
             {
@@ -30,10 +27,7 @@ namespace Recupero
 
         public int Voto
         {
-            get
-            {
-                return voto;
-            }
+            get => voto;
 
             set
             {
@@ -50,9 +44,8 @@ namespace Recupero
             Voto = v;
         }
 
-        public override string ToString()
-        {
-            return $"{Materia}: {Voto}";
-        }
+        public override string ToString() => $"{Materia}: {Voto}";
+
+        // Ricorda: se metodi, costruttori e get/set di proprietà hanno un'unica istruzione, posso usare la forma compatta con un corpo di espressione (v. ad esempio i getter delle proprietà Materia e Voto e il metodo ToString)
     }
 }
