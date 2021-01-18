@@ -89,6 +89,7 @@ namespace Recupero
         // Ricorda: per le proprietà in sola lettura (cioè con il solo ramo get) posso usare la forma compatta come di seguito
         public string Nome => nome;
 
+
         public int this[int indice] => valutazioni[indice].Voto;
 
         public double MediaVoti()

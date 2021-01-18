@@ -35,6 +35,8 @@ namespace DemoMedia
             this.btnCaricaImmagine = new System.Windows.Forms.Button();
             this.btnPlayMP3 = new System.Windows.Forms.Button();
             this.lblImmagine = new System.Windows.Forms.Label();
+            this.lblTestFont = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,11 +99,22 @@ namespace DemoMedia
             this.lblImmagine.TabIndex = 6;
             this.lblImmagine.Text = "Scegli un\'immagine";
             // 
+            // lblTestFont
+            // 
+            this.lblTestFont.AutoSize = true;
+            this.lblTestFont.Font = new System.Drawing.Font("Freak", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestFont.Location = new System.Drawing.Point(194, 202);
+            this.lblTestFont.Name = "lblTestFont";
+            this.lblTestFont.Size = new System.Drawing.Size(259, 38);
+            this.lblTestFont.TabIndex = 7;
+            this.lblTestFont.Text = "Test font caricato";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 387);
+            this.Controls.Add(this.lblTestFont);
             this.Controls.Add(this.lblImmagine);
             this.Controls.Add(this.btnPlayMP3);
             this.Controls.Add(this.btnCaricaImmagine);
@@ -126,6 +139,8 @@ namespace DemoMedia
         private System.Windows.Forms.Button btnCaricaImmagine;
         private System.Windows.Forms.Button btnPlayMP3;
         private System.Windows.Forms.Label lblImmagine;
+        private System.Windows.Forms.Label lblTestFont;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
@@ -18,8 +19,22 @@ namespace DemoMedia
             InitializeComponent();
             cbxSceltaImmagine.Items.Clear();
             cbxSceltaImmagine.Items.AddRange(nomiImg);
+
+            CaricaFont();
         }
 
+        private void CaricaFont()
+        {   
+            // estrae la risorsa "font" e la salva su file 
+            File.WriteAllBytes("temp.ttf", Properties.Resources.Computerfont);
+
+            // aggiunge il font caricandolo dal file 
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile("temp.ttf");
+             
+            // imposta il font (usa la dimensione impostata a design time)
+            lblTestFont.Font = new Font(pfc.Families[0], lblTestFont.Font.Size);
+        }
 
         private void btnCaricaImmagine_Click(object sender, EventArgs e)
         {

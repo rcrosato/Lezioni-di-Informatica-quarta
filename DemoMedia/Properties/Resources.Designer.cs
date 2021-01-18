@@ -80,6 +80,16 @@ namespace DemoMedia.Properties {
         }
         
         /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Computerfont {
+            get {
+                object obj = ResourceManager.GetObject("Computerfont", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap connecting_0 {

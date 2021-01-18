@@ -96,6 +96,7 @@
     <Content Include="asleep.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Computerfont.ttf" />
     <None Include="Resources\GameBackground.mp3" />
     <None Include="Resources\away.png" />
     <None Include="Resources\connecting-3.png" />
