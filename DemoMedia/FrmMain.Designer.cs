@@ -102,10 +102,10 @@ namespace DemoMedia
             // lblTestFont
             // 
             this.lblTestFont.AutoSize = true;
-            this.lblTestFont.Font = new System.Drawing.Font("Freak", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTestFont.Location = new System.Drawing.Point(194, 202);
             this.lblTestFont.Name = "lblTestFont";
-            this.lblTestFont.Size = new System.Drawing.Size(259, 38);
+            this.lblTestFont.Size = new System.Drawing.Size(264, 37);
             this.lblTestFont.TabIndex = 7;
             this.lblTestFont.Text = "Test font caricato";
             // 
