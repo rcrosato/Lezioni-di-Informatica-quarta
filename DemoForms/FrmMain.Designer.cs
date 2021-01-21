@@ -35,6 +35,7 @@ namespace DemoForms
             this.lblNColori = new System.Windows.Forms.Label();
             this.nudNColori = new System.Windows.Forms.NumericUpDown();
             this.btnApriFinestraColori = new System.Windows.Forms.Button();
+            this.btnApriDialogo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudNColori)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,19 +96,30 @@ namespace DemoForms
             // 
             // btnApriFinestraColori
             // 
-            this.btnApriFinestraColori.Location = new System.Drawing.Point(23, 465);
+            this.btnApriFinestraColori.Location = new System.Drawing.Point(36, 465);
             this.btnApriFinestraColori.Name = "btnApriFinestraColori";
-            this.btnApriFinestraColori.Size = new System.Drawing.Size(186, 41);
+            this.btnApriFinestraColori.Size = new System.Drawing.Size(143, 41);
             this.btnApriFinestraColori.TabIndex = 5;
             this.btnApriFinestraColori.Text = "Apri finestra colori";
             this.btnApriFinestraColori.UseVisualStyleBackColor = true;
             this.btnApriFinestraColori.Click += new System.EventHandler(this.btnApriFinestraColori_Click);
+            // 
+            // btnApriDialogo
+            // 
+            this.btnApriDialogo.Location = new System.Drawing.Point(195, 465);
+            this.btnApriDialogo.Name = "btnApriDialogo";
+            this.btnApriDialogo.Size = new System.Drawing.Size(143, 41);
+            this.btnApriDialogo.TabIndex = 6;
+            this.btnApriDialogo.Text = "Apri dialogo";
+            this.btnApriDialogo.UseVisualStyleBackColor = true;
+            this.btnApriDialogo.Click += new System.EventHandler(this.btnApriDialogo_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 518);
+            this.Controls.Add(this.btnApriDialogo);
             this.Controls.Add(this.btnApriFinestraColori);
             this.Controls.Add(this.nudNColori);
             this.Controls.Add(this.lblNColori);
@@ -119,6 +131,7 @@ namespace DemoForms
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMain";
             this.Text = "Finestra principale";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
             this.Move += new System.EventHandler(this.FrmMain_Move);
             ((System.ComponentModel.ISupportInitialize)(this.nudNColori)).EndInit();
@@ -134,6 +147,7 @@ namespace DemoForms
         private System.Windows.Forms.NumericUpDown nudNColori;
         private System.Windows.Forms.Button btnApriFinestraColori;
         private System.Windows.Forms.Panel pnlQuadro;
+        private System.Windows.Forms.Button btnApriDialogo;
     }
 }
 

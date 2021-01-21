@@ -23,6 +23,24 @@ namespace DemoMedia
             CaricaFont();
         }
 
+        /// <summary>
+        /// restituisce una stringa che contiene i nomi di tutti i controlli (anche quelli annidati) contenuti nel contenitore
+        /// </summary>
+        /// <param name="contenitore">controllo da esaminare</param>
+        /// <returns>elenco (uno per riga) di tutti i controlli contenuti</returns>
+        private string EsaminaContenitore(Control contenitore)
+        {
+            string  s = "";
+            for (int i = 0; i < contenitore.Controls.Count; i++)
+            {
+                s += contenitore.Controls[i].Name + "\n";
+
+                if (contenitore.Controls[i].Controls.Count > 0)
+                    s += EsaminaContenitore(contenitore.Controls[i]);
+            }
+            return s;
+        }
+
         private void CaricaFont()
         {   
             // estrae la risorsa "font" e la salva su file 
@@ -31,9 +49,17 @@ namespace DemoMedia
             // aggiunge il font caricandolo dal file 
             PrivateFontCollection pfc = new PrivateFontCollection();
             pfc.AddFontFile("temp.ttf");
-             
-            // imposta il font (usa la dimensione impostata a design time)
-            lblTestFont.Font = new Font(pfc.Families[0], lblTestFont.Font.Size);
+
+            Font font = new Font(pfc.Families[0], 16);
+
+            // imposta il font per tutte le label
+
+            for(int i = 0; i < this.Controls.Count; i++)
+            {
+                if (this.Controls[i].Tag != null && this.Controls[i].Tag.ToString() == "speciale")
+                    (this.Controls[i] as Label).Font = font;
+            }
+            MessageBox.Show(EsaminaContenitore(this));
         }
 
         private void btnCaricaImmagine_Click(object sender, EventArgs e)

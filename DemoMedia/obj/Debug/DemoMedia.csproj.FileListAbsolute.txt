@@ -1,0 +1,13 @@
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\bin\Debug\asleep.png
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\bin\Debug\DemoMedia.exe.config
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\bin\Debug\DemoMedia.exe
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\bin\Debug\DemoMedia.pdb
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.csprojAssemblyReference.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\Interop.WMPLib.dll
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.csproj.ResolveComReference.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.FrmMain.resources
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.Properties.Resources.resources
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.csproj.GenerateResource.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.csproj.CoreCompileInputs.cache
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.exe
+C:\Riccardo\ITIS_VEM\CS\github\Lezioni-di-Informatica-quarta\DemoMedia\obj\Debug\DemoMedia.pdb

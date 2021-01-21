@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using DemoForms.Properties;
 
 namespace DemoForms
 {
@@ -22,7 +23,10 @@ namespace DemoForms
                 splash.pgbCaricamento.PerformStep();
                 Thread.Sleep(500);
                 Application.DoEvents();
-            }            
+            }
+
+            // legge il numero di colori dalle impostazioni
+            nudNColori.Value = Settings.Default.NumeroPulsanti;
         }
 
         private void FrmMain_Shown(object sender, EventArgs e)
@@ -64,6 +68,31 @@ namespace DemoForms
         {
             if (finestraColori != null && !finestraColori.IsDisposed)
                 finestraColori.PosizionaFinestra();
+        }
+
+        private void btnApriDialogo_Click(object sender, EventArgs e)
+        {
+            // esempio di utilizzo dell'enumarazione DialogResult
+            FrmDialogo frm = new FrmDialogo();
+
+            DialogResult risultato = frm.ShowDialog();
+            if (risultato == DialogResult.OK)
+                MessageBox.Show("Ok le tue impostazioni saranno salvate");
+            else
+                if (risultato == DialogResult.Abort)
+                MessageBox.Show("Pensaci!");
+            else
+                if (risultato == DialogResult.Cancel)
+                MessageBox.Show("Hai annullato la tua scelta");
+        }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // aggiorna l'impostazione
+            Settings.Default.NumeroPulsanti = nudNColori.Value;
+
+            // salva le impostazioni (le impostazioni vengono salvate nel percorso \Users\nome_utente\AppData\Local\nome_applicazione\)
+            Settings.Default.Save();
         }
     }
 }

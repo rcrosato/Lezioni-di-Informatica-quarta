@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FD11861-0F19-4B42-9FB8-00774F252F69}</ProjectGuid>
+    <ProjectGuid>{02519FC7-2809-468E-A649-7725E3A42AFD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DemoForms</RootNamespace>
-    <AssemblyName>DemoForms</AssemblyName>
+    <RootNamespace>DemoGrafica2D</RootNamespace>
+    <AssemblyName>DemoGrafica2D</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,43 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmColori.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmColori.Designer.cs">
-      <DependentUpon>FrmColori.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDialogo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDialogo.Designer.cs">
-      <DependentUpon>FrmDialogo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSplash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSplash.designer.cs">
-      <DependentUpon>FrmSplash.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmColori.resx">
-      <DependentUpon>FrmColori.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDialogo.resx">
-      <DependentUpon>FrmDialogo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSplash.resx">
-      <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
