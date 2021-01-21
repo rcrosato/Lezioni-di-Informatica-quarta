@@ -14,7 +14,7 @@ namespace DemoForms
     {
         public FrmDialogo()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
